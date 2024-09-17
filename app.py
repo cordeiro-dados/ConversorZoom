@@ -18,9 +18,9 @@ def process_data(df):
             row['Data'], row['Debito'], row['Credito'], row['Valor'], str(row["CodHistorico"]),
             row['Histórico']
         ])
-        xx_centro_custo = f"XX;{row['Centro de Custo']}"
+        xx_centro_custo = f"XX;{row['D/C']}"
         data_rows.append([
-            xx_centro_custo, row['D/C'], row['Valor']
+            xx_centro_custo, row['Centro de Custo'], row['Valor']
         ])
 
     return data_rows
