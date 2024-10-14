@@ -7,6 +7,7 @@ def load_data(file_path):
     df = pd.read_excel(file_path)
     df["CodHistorico"] = "350"
     df['Data'] = pd.to_datetime(df['Data'], format='%d%m%Y').dt.strftime('%d%m%Y')
+
     return df
 
 # Função para processar os dados
@@ -15,8 +16,8 @@ def process_data(df):
 
     for index, row in df.iterrows():
         data_rows.append([
-            row['Data'], row['Debite'], row['Credite'], row['Valor'], str(row["CodHistorico"]),
-            row['Histórico']
+            row['Data'], str(row['Debite']), row['Credite'], row['Valor'], row["CodHistorico"],
+            row['Histórico'] 
         ])
         xx_centro_custo = f"XX;{row['D/C']}"
         data_rows.append([
