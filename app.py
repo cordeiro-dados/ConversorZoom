@@ -15,7 +15,7 @@ def process_data(df):
 
     for index, row in df.iterrows():
         data_rows.append([
-            row['Data'], row['Debito'], row['Credito'], row['Valor'], str(row["CodHistorico"]),
+            row['Data'], row['Debite'], row['Credite'], row['Valor'], str(row["CodHistorico"]),
             row['Histórico']
         ])
         xx_centro_custo = f"XX;{row['D/C']}"
